@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #DDF9C1;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #483653;
+}
+
+
+.game {
+    display: flex;
+    height: 50%;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    width: 6.5rem;
+    height: 6rem;
+    margin: 5px;
+    font-size: 4rem;
+    background-color: #3E885B;
+    color: #8a227a;
+    border-radius: 12%;
+    border: none;
+    box-shadow: 5px 5px 5px #22c061;
+}
+
+.box-no-shadow {
+    box-shadow: none;
+}
+
+.box:hover {
+    box-shadow: none;
+}
+
+
+.btn {
+    margin-top: 10px;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+    background-color: #BB999C;
+    color: #0f1866;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #e28e96;
+    color: #444da0;
+}
+
+
+/* For displaying winning msg and new game button */
+
+
+.win-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.win-container-msg {
+    margin-bottom: 2rem;
+    color: #483653;
+}
+
+/* To make winning msg visible or invisible through js */
+
+.visible {
+    display: flex;
+}
+
+
+.invisible {
+    display: none;
+}
+
