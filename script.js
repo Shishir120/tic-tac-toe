@@ -1,12 +1,9 @@
 let boxes = document.querySelectorAll(".box");
 let winContainer = document.querySelector('.win-container');
 let winContainerMsg = document.querySelector('.win-container-msg');
-// let resetBtn = document.querySelector('.reset-btn');
-// let newGameBtn = document.querySelector('.newgame-btn');
 let btn = document.querySelectorAll('.btn');
 
-
-playerO = true
+playerO = true;
 
 const winPatterns = [
     [0,1,2],
@@ -23,7 +20,7 @@ const winPatterns = [
 const disableBoxes = () => {
     boxes.forEach ((box) => {
         box.disabled = true;
-    })
+    });
 }
 
 
@@ -32,7 +29,7 @@ const enableBoxes = () => {
         box.disabled = false;
         box.innerText = "";
         box.classList.remove("box-no-shadow");
-    })
+    });
 }
 
 
@@ -46,22 +43,19 @@ const winMsg  =(player) => {
 
 const win = () => {
         
-        for (patterns of winPatterns) {
-            if (boxes[patterns[0]].innerText == 'O' && boxes[patterns[1]].innerText == 'O' && boxes[patterns[2]].innerText == 'O'){
-                console.log('winner');
-                disableBoxes();
-                winMsg('O');
-            } 
-
-            else if (boxes[patterns[0]].innerText == 'X' && boxes[patterns[1]].innerText == 'X' && boxes[patterns[2]].innerText == 'X') {
-                console.log('winner');
-                disableBoxes();
-                winMsg('X');
-
-            };
+    for (patterns of winPatterns) {
+        if (boxes[patterns[0]].innerText == 'O' && boxes[patterns[1]].innerText == 'O' && boxes[patterns[2]].innerText == 'O'){
+            console.log('winner');
+            disableBoxes();
+            winMsg('O');
+        } 
+        else if (boxes[patterns[0]].innerText == 'X' && boxes[patterns[1]].innerText == 'X' && boxes[patterns[2]].innerText == 'X') {
+            console.log('winner');
+            disableBoxes();
+            winMsg('X');
 
         };
-
+    };
 };
 
 
@@ -75,7 +69,7 @@ boxes.forEach((box) => {
         } else {
             box.innerText = "X";
             playerO = true;
-        }
+        };
 
         box.classList.add("box-no-shadow");
         box.disabled = true;
